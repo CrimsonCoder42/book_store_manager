@@ -9,8 +9,9 @@ var (
 	db * gorm.DB
 )
 
+// make sure to set your own database connection information
 func Connect(){
-	d, err := gorm.Open("mysql", "akhil:akhil@/go_bookstore?charset=utf8&parseTime=True&loc=Local")
+	d, err := gorm.Open("mysql", "")
 	if err != nil {
 		panic("failed to connect database")
 	}
